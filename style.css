@@ -1,57 +1,128 @@
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
+    background-image: url(background.jpg);
+    background-size: cover;
     color: white;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+header{
+    padding: 20px;
+    text-align: center;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: red;
+    z-index: 2;
+    top: 0;
+}
+nav ul li{
+    display: inline-block;
     padding: 20px;
 }
-
-nav {
-    background-color: #555;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
+nav ul li a{
     text-decoration: none;
-    font-weight: bold;
+    color:black;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
 }
-
-nav ul li a:hover {
-    text-decoration: underline;
+main{
+    margin: 100px;
 }
-
-main {
+#aboutmyself, #mylifestory, #myhobbies, #favorites, #friends{
+    background-color: pink;
+    border-radius: 20px;
     padding: 20px;
+    width: 75%;
+    margin: 50px auto;
+    color: black;
 }
-
-section {
+article{
     margin-bottom: 20px;
 }
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+h1, h2, h3{
+    margin: 5;
+    color: black;
+    text-shadow: -1px 0 red,0 2px red, 2px 0 red, 0 -1px red;
 }
+figcaption{
+    text-align: center;
+    color: black;
+}
+footer{
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+p{
+    text-align: justify;
+    color: black;
+}
+@media only screen and(max-width: 950px){
+nav{
+    position: absolute;
+    width: 100%;
+    background-color: blue;
+    z-index: 2;
+    top: 0;
+}
+#logo{
+    position: absolute;
+    margin: 16px 36px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 3;
+}
+nav ul li{
+    display: block;
+    padding: 5px;
+    text-align: end;
+}
+h1{
+    margin: 5;
+    color: black;
+    font-size: 40px;
+}
+td{
+    padding: 20px .625em .625em .625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: auto;
+    font-size: 13px;
+}
+#nc{
+    text-align: center;
+}
+}
+@media only screen and (max-width: 1200px) {
+    #cbm tb{
+        white-space: wrap;
+    }
+}
+@media only screen and (max-width: 600px) {
+    td{
+        white-space: wrap;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
